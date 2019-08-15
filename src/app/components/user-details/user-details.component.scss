@@ -1,0 +1,43 @@
+@import "../../../styles/core";
+
+:host {
+    .title {
+        text-align: center;
+    }
+
+    .user-details {
+        margin: 20px auto;
+        padding: 20px 0;
+        @include border(solid, 1px, $colorLightGray, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        min-width: 400px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 1);
+        box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 1);
+
+        .headline {
+            padding-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $colorLightGray;
+
+            .image {
+                margin: 10px 20px;
+                @include border(solid, 4px, $colorPrimary, 50%);
+                object-fit: cover;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .details {
+            padding-top: 20px;
+        }
+    }
+}

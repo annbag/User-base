@@ -1,3 +1,21 @@
-<p>
-  user-details works!
-</p>
+<section class="container">
+    <h2 class="title">Szczegóły użytkownika:</h2>
+    <div class="user-details" *ngIf="userDetails">
+        <div class="headline">
+            <img src="{{userDetails.image}}" alt="{{userDetails.firstName}}" class="image">
+            <p>{{userDetails.nameTitle}} {{userDetails.firstName}} {{userDetails.lastName}}</p>
+        </div>
+        <div class="details">
+            <p>Gender: {{userDetails.gender}}</p>
+            <p>Phone: {{userDetails.phone}}</p>
+            <p>Cell: {{userDetails.cell}}</p>
+            <p>Email: {{userDetails.email}}</p>
+            <h3>Location:</h3>
+            <p>Street: {{userDetails.location.street}}</p>
+            <p>City: {{userDetails.location.city}}</p>
+            <p>State: {{userDetails.location.state}}</p>
+            <p>Postcode: {{userDetails.location.postcode}}</p>
+            <p>Timezone: {{userDetails.location.timezone}}</p>
+        </div>
+    </div>
+</section>
