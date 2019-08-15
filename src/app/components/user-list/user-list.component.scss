@@ -1,0 +1,47 @@
+@import "../../../styles/core";
+
+:host {
+    .user-list {
+        margin: 10px 0;
+        width: 600px;
+        @include border(solid, 1px, $colorLightGray, 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba($colorLightGray, 0.2);
+
+        .col {
+            flex: 1;
+            &:first-child, &:last-child {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .image {
+            margin: 10px 20px;
+            @include border(solid, 4px, $colorPrimary, 50%);
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+        }
+
+        .name {
+            font-size: 16px;
+        }
+
+        .see-more {
+            padding: 8px 16px;
+            @include border(solid, 1px, $colorPrimary, 6px);
+            background-color: $colorPrimary;
+            color: $colorBackground;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba($colorPrimary, 0.8);
+            }
+            transition: all 250ms ease;
+        }
+
+    }
+}

@@ -1,10 +1,10 @@
 @import "variables";
 
-@mixin border() {
+@mixin border($style, $width, $color, $radius) {
     border: {
-        style: solid;
-        width: 1px;
-        color: $colorPrimary;
-        radius: 6px;
+        style: $style;
+        width: $width;
+        color: $color;
+        radius: $radius;
     }
 }
