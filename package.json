@@ -1,5 +1,5 @@
 {
-  "name": "Users-base",
+  "name": "users-base",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build --base-href=/Users-base",
+    "predeploy": "ng build --base-href=/users-base",
     "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist"
   },
   "private": true,
