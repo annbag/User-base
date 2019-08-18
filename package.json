@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build --base-href=/users-base",
-    "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist"
+    "predeploy": "ng build --base-href=/users-base/",
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist/users-base"
   },
   "private": true,
   "dependencies": {
