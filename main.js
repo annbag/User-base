@@ -224,16 +224,14 @@ var UserDetailsComponent = /** @class */ (function () {
         this.route = route;
     }
     UserDetailsComponent.prototype.ngOnInit = function () {
-        this.getUserDetails();
         this.userId = this.route.snapshot.params['id'];
-        console.log(this.userId);
+        this.getUserDetails();
     };
     UserDetailsComponent.prototype.getUserDetails = function () {
         var _this = this;
-        this.userDetailsService.getUserDetails(1)
+        this.userDetailsService.getUserDetails(this.userId)
             .subscribe(function (userDetails) {
             _this.userDetails = userDetails;
-            console.log(_this.userDetails);
         });
     };
     UserDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -323,15 +321,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _user_list_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-list.service */ "./src/app/components/user-list/user-list.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-
 
 
 
 var UserListComponent = /** @class */ (function () {
-    function UserListComponent(userListService, router) {
+    function UserListComponent(userListService) {
         this.userListService = userListService;
-        this.router = router;
         this.userList = [];
     }
     UserListComponent.prototype.ngOnInit = function () {
@@ -342,7 +337,6 @@ var UserListComponent = /** @class */ (function () {
         this.userListService.getUsers()
             .subscribe(function (users) {
             _this.userList = users;
-            console.log(_this.userList);
         });
     };
     UserListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -351,8 +345,7 @@ var UserListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./user-list.component.html */ "./src/app/components/user-list/user-list.component.html"),
             styles: [__webpack_require__(/*! ./user-list.component.scss */ "./src/app/components/user-list/user-list.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_user_list_service__WEBPACK_IMPORTED_MODULE_2__["UserListService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_user_list_service__WEBPACK_IMPORTED_MODULE_2__["UserListService"]])
     ], UserListComponent);
     return UserListComponent;
 }());
