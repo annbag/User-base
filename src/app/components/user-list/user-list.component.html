@@ -1,14 +1,16 @@
 <section class="container">
-    <h2>Lista użytkowników:</h2>
-    <div class="user-list" *ngFor="let user of userList.data">
-        <div class="col">
-            <img src="{{user.image}}" alt="{{user.name}}" class="image">
-        </div>
-        <div class="col">
-            <p class="name">{{user.nameTitle}} {{user.firstName}} {{user.lastName}}</p>
-        </div>
-        <div class="col">
-            <button class="see-more" [routerLink]="'user/' + user.id">See details</button>
+    <h2 class="title">Lista użytkowników:</h2>
+    <div class="user-list">
+        <div class="user" *ngFor="let user of userList.data">
+            <div class="col">
+                <img src="{{user.image}}" alt="{{user.name}}" class="image">
+            </div>
+            <div class="col">
+                <p class="name">{{user.nameTitle}} {{user.firstName}} {{user.lastName}}</p>
+            </div>
+            <div class="col">
+                <button class="see-more" [routerLink]="'user/' + user.id">See details</button>
+            </div>
         </div>
     </div>
 </section>

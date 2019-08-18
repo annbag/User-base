@@ -8,5 +8,10 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .app-title {
+            color: $colorTextPrimary;
+            text-decoration: none;
+        }
     }
 }
