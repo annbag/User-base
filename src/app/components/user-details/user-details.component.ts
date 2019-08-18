@@ -17,16 +17,14 @@ export class UserDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.getUserDetails();
         this.userId = this.route.snapshot.params['id'];
-        console.log(this.userId);
+        this.getUserDetails();
     }
 
     public getUserDetails() {
-        this.userDetailsService.getUserDetails(1)
+        this.userDetailsService.getUserDetails(this.userId)
             .subscribe(userDetails => {
                 this.userDetails = userDetails;
-                console.log(this.userDetails);
-            })
+            });
     }
 }

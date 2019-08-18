@@ -12,6 +12,6 @@ export class UserDetailsService {
     }
 
     public getUserDetails(userId: number): Observable<UserDetails> {
-        return this.httpClient.get<UserDetails>('https://dummyapi.io/api/user/' + userId)
+        return this.httpClient.get<UserDetails>('https://dummyapi.io/api/user/' + userId);
     }
 }
