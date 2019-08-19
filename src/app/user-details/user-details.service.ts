@@ -13,6 +13,6 @@ export class UserDetailsService {
     }
 
     public getUserDetails(userId: number): Observable<UserDetails> {
-        return this.httpClient.get<UserDetails>(`${environment.apiBaseUrl}` + '/user/' + userId);
+        return this.httpClient.get<UserDetails>(`${environment.apiBaseUrl}/user/${userId}`);
     }
 }

@@ -14,6 +14,6 @@ export class UserListService {
     }
 
     public getUsers(): Observable<Array<User>> {
-        return this.httpClient.get<Array<User>>(`${environment.apiBaseUrl}` + '/user');
+        return this.httpClient.get<Array<User>>(`${environment.apiBaseUrl}/user`);
     }
 }
