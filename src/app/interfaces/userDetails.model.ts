@@ -1,4 +1,4 @@
-export interface UserDetails {
+export interface UserDetailsModel {
     id: number,
     nameTitle: string,
     firstName: string,
