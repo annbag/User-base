@@ -21,7 +21,7 @@ export class UserDetailsComponent implements OnInit {
         this.getUserDetails();
     }
 
-    public getUserDetails() {
+    private getUserDetails() {
         this.userDetailsService.getUserDetails(this.userId)
             .subscribe(userDetails => {
                 this.userDetails = userDetails;
