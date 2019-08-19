@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {UserModel} from './user.model';
+import {User} from './user.model';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 
@@ -13,7 +13,7 @@ export class UserListService {
 
     }
 
-    public getUsers(): Observable<Array<UserModel>> {
-        return this.httpClient.get<Array<UserModel>>(`${environment.apiBaseUrl}` + '/user');
+    public getUsers(): Observable<Array<User>> {
+        return this.httpClient.get<Array<User>>(`${environment.apiBaseUrl}` + '/user');
     }
 }
