@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {UserDetails} from '../../interfaces/userDetails';
 import {Observable} from 'rxjs';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +13,6 @@ export class UserDetailsService {
     }
 
     public getUserDetails(userId: number): Observable<UserDetails> {
-        return this.httpClient.get<UserDetails>('https://dummyapi.io/api/user/' + userId);
+        return this.httpClient.get<UserDetails>(`${environment.apiBaseUrl}` + '/user/' + userId);
     }
 }
