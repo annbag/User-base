@@ -329,7 +329,7 @@ var UserDetailsService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     UserDetailsService.prototype.getUserDetails = function (userId) {
-        return this.httpClient.get("" + _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiBaseUrl + '/user/' + userId);
+        return this.httpClient.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiBaseUrl + "/user/" + userId);
     };
     UserDetailsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -435,7 +435,7 @@ var UserListService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     UserListService.prototype.getUsers = function () {
-        return this.httpClient.get("" + _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiBaseUrl + '/user');
+        return this.httpClient.get(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiBaseUrl + "/user");
     };
     UserListService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
